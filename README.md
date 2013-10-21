@@ -42,3 +42,10 @@ For iOS 6-, this is the view’s background color. For iOS 7+ it represents back
 ## iOS 6 and lower?
 It works but without translucent effect. Behaves as a regular UIView. Try using some opacity on backgroundColor instead.
 
+## Storyboard or XIB
+
+In Identity Inspector just add Custom Class: ILTranslucentView. 
+
+<p align="center" >
+  <img src="https://raw.github.com/ivoleko/ILTranslucentView/master/StoryboardOrXIB.png" alt="ILTranslucentView_examples" title="ILTranslucentView_examples">
+</p>
