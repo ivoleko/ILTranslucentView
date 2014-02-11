@@ -22,7 +22,8 @@ It can be used on all iOS devices in real time without any performance problems.
 ```
 
 #### translucentAlpha
-The translucent's alpha value. The value of this property is a floating-point number in the range 0.0 to 1.0, where 0.0 represents view without translucent effect and 1.0 represents maximum translucent effect. 
+The translucent's alpha value. The value of this property is a floating-point number in the range 0.0 to 1.0, where 0.0 represents view without translucent effect and 1.0 represents maximum translucent effect.  
+<i>Notice: If translucentAlpha is not set to 1.0, view may lose blur effect.</i>
 
 #### translucentStyle
 ILTranslucentView uses UIToolbar to provide translucent effect. This property specifies its appearance.
