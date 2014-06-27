@@ -25,17 +25,17 @@ Using Swift, sending this subview to the back and [including ObjC in our Swift p
 [objc-swift]:http://stackoverflow.com/a/24102433/1141256
 
 ```swift
+    // sizing background image correctly
+    UIGraphicsBeginImageContext(self.view.frame.size)
+    UIImage(named: "bw.png").drawInRect(self.view.bounds)
+    var resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext()
+    self.view.backgroundColor = UIColor(patternImage:resizedImage)
+        
+    // blurry background like control and notification center
     var translucentView = ILTranslucentView(frame: self.view.frame)
-    translucentView.alpha = 1.0
-    translucentView.backgroundColor = UIColor.clearColor()
-    translucentView.translucentStyle = UIBarStyle.Default
-    translucentView.translucentTintColor = UIColor.clearColor()
+    translucentView.translucentAlpha = 0.78
     self.view.insertSubview(translucentView, atIndex: 0)
-    
-    // background image
-    var backgroundImage:UIImage = UIImage(named: "image.jpg")
-    var background = UIColor(patternImage:backgroundImage)
-    self.view.backgroundColor = background
 ```
 
 #### translucentAlpha
