@@ -18,7 +18,6 @@ It can be used on all iOS devices in real time without any performance problems.
     translucentView.translucentStyle = UIBarStyleDefault;
     translucentView.translucentTintColor = [UIColor clearColor];
     translucentView.backgroundColor = [UIColor clearColor];
-
 ```
 
 Using Swift, sending this subview to the back and [including ObjC in our Swift project][objc-swift],
@@ -32,6 +31,11 @@ Using Swift, sending this subview to the back and [including ObjC in our Swift p
     translucentView.translucentStyle = UIBarStyle.Default
     translucentView.translucentTintColor = UIColor.clearColor()
     self.view.insertSubview(translucentView, atIndex: 0)
+    
+    // background image
+    var backgroundImage:UIImage = UIImage(named: "image.jpg")
+    var background = UIColor(patternImage:backgroundImage)
+    self.view.backgroundColor = background
 ```
 
 #### translucentAlpha
