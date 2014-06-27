@@ -21,6 +21,19 @@ It can be used on all iOS devices in real time without any performance problems.
 
 ```
 
+Using Swift, sending this subview to the back and [including ObjC in our Swift project][objc-swift],
+
+[objc-swift]:http://stackoverflow.com/a/24102433/1141256
+
+```swift
+    var translucentView = ILTranslucentView(frame: self.view.frame)
+    translucentView.alpha = 1.0
+    translucentView.backgroundColor = UIColor.clearColor()
+    translucentView.translucentStyle = UIBarStyle.Default
+    translucentView.translucentTintColor = UIColor.clearColor()
+    self.view.insertSubview(translucentView, atIndex: 0)
+```
+
 #### translucentAlpha
 The translucent's alpha value. The value of this property is a floating-point number in the range 0.0 to 1.0, where 0.0 represents view without translucent effect and 1.0 represents maximum translucent effect.  
 <i>Notice: If translucentAlpha is not set to 1.0, view may lose blur effect.</i>
