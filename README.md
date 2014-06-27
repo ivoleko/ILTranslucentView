@@ -18,7 +18,24 @@ It can be used on all iOS devices in real time without any performance problems.
     translucentView.translucentStyle = UIBarStyleDefault;
     translucentView.translucentTintColor = [UIColor clearColor];
     translucentView.backgroundColor = [UIColor clearColor];
+```
 
+Using Swift, sending this subview to the back and [including ObjC in our Swift project][objc-swift],
+
+[objc-swift]:http://stackoverflow.com/a/24102433/1141256
+
+```swift
+    // sizing background image correctly
+    UIGraphicsBeginImageContext(self.view.frame.size)
+    UIImage(named: "bw.png").drawInRect(self.view.bounds)
+    var resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext()
+    self.view.backgroundColor = UIColor(patternImage:resizedImage)
+        
+    // blurry background like control and notification center
+    var translucentView = ILTranslucentView(frame: self.view.frame)
+    translucentView.translucentAlpha = 0.78
+    self.view.insertSubview(translucentView, atIndex: 0)
 ```
 
 #### translucentAlpha
