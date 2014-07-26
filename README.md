@@ -51,7 +51,7 @@ For iOS 6-, this is the view’s background color. For iOS 7+ it represents back
 </p>
 
 ## iOS 6 and lower?
--It works but only Objective-C class without translucent effect. Behaves as a regular UIView. Try using some opacity on backgroundColor instead.
+It works but only Objective-C class and without translucent effect. Behaves as a regular UIView. Try using some opacity on backgroundColor instead.
 
 
 ## Storyboard or XIB
