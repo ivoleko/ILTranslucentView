@@ -50,8 +50,8 @@ For iOS 6-, this is the view’s background color. For iOS 7+ it represents back
   <img src="https://raw.github.com/ivoleko/ILTranslucentView/master/ScreenShot%20example.png" alt="ILTranslucentView_examples" title="ILTranslucentView_examples">
 </p>
 
--## iOS 6 and lower?
- -It works but only Objective-C class without translucent effect. Behaves as a regular UIView. Try using some opacity on backgroundColor instead.
+## iOS 6 and lower?
+-It works but only Objective-C class without translucent effect. Behaves as a regular UIView. Try using some opacity on backgroundColor instead.
 
 
 ## Storyboard or XIB
