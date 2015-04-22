@@ -22,7 +22,7 @@ It can be used on all iOS devices in real time without any performance problems.
 ```
 
 ```swift
-    var view = ILTranslucentView(frame: CGRectMake(0, 0, 250, 150)
+    var view = ILTranslucentView(frame: CGRectMake(0, 0, 250, 150))
     self.view.addSubview(view)
     
     view.translucentAlpha = 1
