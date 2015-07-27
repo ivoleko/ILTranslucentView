@@ -113,14 +113,14 @@ extension ILTranslucentView {
         self.translucent = true
         self.translucentAlpha = 1
 
-        var _nonExistentSubview = UIView(frame: self.bounds)
+        let _nonExistentSubview = UIView(frame: self.bounds)
         _nonExistentSubview.backgroundColor = UIColor.clearColor()
         _nonExistentSubview.clipsToBounds = true
         _nonExistentSubview.autoresizingMask = [UIViewAutoresizing.FlexibleBottomMargin, UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleRightMargin, UIViewAutoresizing.FlexibleTopMargin]
         self.nonExistentSubview = _nonExistentSubview
-        self.insertSubview(self.nonExistentSubview, atIndex: 0)
+        self.insertSubview(self.nonExistentSubview!, atIndex: 0)
 
-        var _toolbarContainerClipView = UIView(frame: self.bounds)
+        let _toolbarContainerClipView = UIView(frame: self.bounds)
         _toolbarContainerClipView.backgroundColor = UIColor.clearColor()
         _toolbarContainerClipView.clipsToBounds = true
         _toolbarContainerClipView.autoresizingMask = [UIViewAutoresizing.FlexibleBottomMargin, UIViewAutoresizing.FlexibleLeftMargin, UIViewAutoresizing.FlexibleRightMargin, UIViewAutoresizing.FlexibleTopMargin]
@@ -131,14 +131,14 @@ extension ILTranslucentView {
         rect.origin.y -= 1
         rect.size.height += 1
         
-        var _toolbarBG = UIToolbar(frame: rect)
+        let _toolbarBG = UIToolbar(frame: rect)
         _toolbarBG.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         self.toolbarBG = _toolbarBG
         
         self.toolbarContainerClipView!.addSubview(self.toolbarBG!)
         self.ilDefaultColorBG = self.toolbarBG!.barTintColor
         
-        var _overlayBackgroundView = UIView(frame: self.bounds)
+        let _overlayBackgroundView = UIView(frame: self.bounds)
         _overlayBackgroundView.backgroundColor = self.backgroundColor
         _overlayBackgroundView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         self.overlayBackgroundView = _overlayBackgroundView
