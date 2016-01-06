@@ -14,7 +14,7 @@ import UIKit
 public class ILTranslucentView: UIView {
 
     private var _translucent = true
-    @IBInspectable var translucent : Bool {
+    @IBInspectable public var translucent : Bool {
         set {
             _translucent = newValue
             if self.toolbarBG == nil {
@@ -38,7 +38,7 @@ public class ILTranslucentView: UIView {
     }
     
     private var _translucentAlpha : CGFloat = 1.0
-    @IBInspectable internal var translucentAlpha : CGFloat {
+    @IBInspectable public var translucentAlpha : CGFloat {
         set {
             if newValue > 1 {
                 _translucentAlpha = 1
@@ -57,7 +57,7 @@ public class ILTranslucentView: UIView {
         }
     }
     
-    @IBInspectable var translucentStyle : UIBarStyle {
+    @IBInspectable public var translucentStyle : UIBarStyle {
         set {
             if self.toolbarBG != nil {
                 self.toolbarBG!.barStyle = newValue
@@ -73,7 +73,7 @@ public class ILTranslucentView: UIView {
     }
     
     private var _translucentTintColor = UIColor.clearColor()
-    @IBInspectable var translucentTintColor : UIColor {
+    @IBInspectable public var translucentTintColor : UIColor {
         set {
             _translucentTintColor = newValue
             if (self.isItClearColor(newValue)) {
