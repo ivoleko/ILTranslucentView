@@ -10,10 +10,11 @@
 
 import UIKit
 
-class ILTranslucentView: UIView {
+@IBDesignable
+public class ILTranslucentView: UIView {
 
     private var _translucent = true
-    var translucent : Bool {
+    @IBInspectable public var translucent : Bool {
         set {
             _translucent = newValue
             if self.toolbarBG == nil {
@@ -37,7 +38,7 @@ class ILTranslucentView: UIView {
     }
     
     private var _translucentAlpha : CGFloat = 1.0
-    internal var translucentAlpha : CGFloat {
+    @IBInspectable public var translucentAlpha : CGFloat {
         set {
             if newValue > 1 {
                 _translucentAlpha = 1
@@ -56,7 +57,7 @@ class ILTranslucentView: UIView {
         }
     }
     
-    var translucentStyle : UIBarStyle {
+    @IBInspectable public var translucentStyle : UIBarStyle {
         set {
             if self.toolbarBG != nil {
                 self.toolbarBG!.barStyle = newValue
@@ -72,7 +73,7 @@ class ILTranslucentView: UIView {
     }
     
     private var _translucentTintColor = UIColor.clearColor()
-    var translucentTintColor : UIColor {
+    @IBInspectable public var translucentTintColor : UIColor {
         set {
             _translucentTintColor = newValue
             if (self.isItClearColor(newValue)) {
@@ -100,7 +101,7 @@ class ILTranslucentView: UIView {
         self.createUI()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.createUI()
     }
@@ -157,7 +158,7 @@ extension ILTranslucentView {
         return red == 0.0 && green == 0.0 && blue == 0.0 && alpha == 0.0
     }
     
-    @objc override var frame : CGRect {
+    @objc public override var frame : CGRect {
         set {
             if self.toolbarContainerClipView == nil {
                 super.frame = newValue
@@ -187,7 +188,7 @@ extension ILTranslucentView {
         }
     }
     
-    @objc override var bounds : CGRect {
+    @objc override public var bounds : CGRect {
         set {
             var rect = newValue
             rect.origin = CGPointZero
@@ -211,7 +212,7 @@ extension ILTranslucentView {
         }
     }
     
-    @objc override var backgroundColor : UIColor! {
+    @objc override public var backgroundColor : UIColor! {
         set {
             if self.initComplete {
                 self.ilColorBG = newValue
@@ -228,7 +229,7 @@ extension ILTranslucentView {
         }
     }
     
-    @objc override var subviews : [UIView] {
+    @objc override public var subviews : [UIView] {
         if self.initComplete {
             var array = super.subviews as [UIView]
             
@@ -250,7 +251,7 @@ extension ILTranslucentView {
         }
     }
     
-    override func sendSubviewToBack(view: UIView)  {
+    override public func sendSubviewToBack(view: UIView)  {
         if self.initComplete {
             self.insertSubview(view, aboveSubview: self.toolbarContainerClipView!)
         } else {
@@ -258,7 +259,7 @@ extension ILTranslucentView {
         }
     }
     
-    override func insertSubview(view: UIView, atIndex index: Int) {
+    override public func insertSubview(view: UIView, atIndex index: Int) {
         if self.initComplete {
             super.insertSubview(view, atIndex: index + 1)
         } else {
@@ -266,7 +267,7 @@ extension ILTranslucentView {
         }
     }
     
-    override func exchangeSubviewAtIndex(index1: Int, withSubviewAtIndex index2: Int)  {
+    override public func exchangeSubviewAtIndex(index1: Int, withSubviewAtIndex index2: Int)  {
         if self.initComplete {
             super.exchangeSubviewAtIndex((index1 + 1), withSubviewAtIndex: (index2 + 1))
         } else {
