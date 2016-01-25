@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'ILTranslucentView'
-  s.version      =  '0.1'
+  s.version      =  '0.2'
   s.license      =  'MIT'
   s.summary      =  'ILTranslucentView is a little subclass of UIView that provide native iOS 7+ blur effect.' 
   s.description      =  'ILTranslucentView is a little subclass of UIView that provide native iOS 7+ blur (translucent) effect. It can be used on all iOS devices in real time without any performance problems. It also supports smooth UIView animation of color, frame, alpha etc.'
