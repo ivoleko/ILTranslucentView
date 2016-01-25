@@ -12,6 +12,8 @@ It can be used on all iOS devices in real time without any performance problems.
  - use it as normal UIView but with additional methods/propertiers:
 
 ```objective-c
+    #import "ILTranslucentView-Swift.h"
+
     ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 250, 150)];
     [self.view addSubview:translucentView]; //that's it :)
     
@@ -24,6 +26,8 @@ It can be used on all iOS devices in real time without any performance problems.
 ```
 
 ```swift
+    import ILTranslucentView
+    
     var view = ILTranslucentView(frame: CGRectMake(0, 0, 250, 150))
     self.view.addSubview(view)
     
