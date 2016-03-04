@@ -6,6 +6,9 @@ ILTranslucentView (iOS, Objective-C, Swift)
 ILTranslucentView is a little subclass of UIView that provide native iOS 7+ blur (translucent) effect.
 It can be used on all iOS devices in real time without any performance problems. It also supports smooth UIView animation of color, frame, alpha etc.
 
+For iOS 8.0+ use Apple's UIVisualEffectView:
+https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIVisualEffectView/
+
 ## How to use it
 
  - add ILTranslucentView.h and ILTranslucentView.m from Source folder to your project
