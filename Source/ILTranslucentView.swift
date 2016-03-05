@@ -96,7 +96,7 @@ public class ILTranslucentView: UIView {
     private var overlayBackgroundView : UIView?
     private var initComplete = false
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         self.createUI()
     }

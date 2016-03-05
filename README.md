@@ -15,6 +15,8 @@ https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIVisualEf
  - use it as normal UIView but with additional methods/propertiers:
 
 ```objective-c
+    #import "ILTranslucentView-Swift.h"
+
     ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 250, 150)];
     [self.view addSubview:translucentView]; //that's it :)
     
@@ -27,6 +29,8 @@ https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIVisualEf
 ```
 
 ```swift
+    import ILTranslucentView
+    
     var view = ILTranslucentView(frame: CGRectMake(0, 0, 250, 150))
     self.view.addSubview(view)
     
